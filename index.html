@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener Tool</title>
+</head>
+<body>
+    <h1>URL Shortener Tool</h1>
+    <form method="POST" action="/">
+        <label for="url">Enter your URL:</label><br>
+        <input type="text" id="url" name="url"><br><br>
+        <input type="submit" value="Shorten URL">
+    </form>
+    {% if short_url %}
+        <h2>Shortened Link: <a href="http://127.0.0.1:5000/{{ short_url }}">http://127.0.0.1:5000/{{ short_url }}</a></h2>
+    {% endif %}
+</body>
+</html>
